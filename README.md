@@ -2,9 +2,9 @@
 chroot envo builder
 
 
-$ ./chroot.sh /bin/{ls,cat,echo,rm,bash} /usr/bin/vi /etc/hosts
-$ sudo groupadd chrootjail
-$ sudo adduser user chrootjail
+. $ ./chroot.sh /bin/{ls,cat,echo,rm,bash} /usr/bin/vi /etc/hosts
+. $ sudo groupadd chrootjail
+. $ sudo adduser user chrootjail
 
 
 Configure sshd for chroot jail
