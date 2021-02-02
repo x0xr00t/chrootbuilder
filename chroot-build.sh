@@ -17,7 +17,6 @@ groupadd $ugroup
 read -p "Please enter the desired user name: " uname
 usermod -G $ugroup $uname
 
-
 # Main code 
 CHROOT='/var/chroot'
 mkdir $CHROOT
