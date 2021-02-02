@@ -1,9 +1,13 @@
 #!/bin/bash
-# This script can be used to create simple chroot environment
-# Written by LinuxCareer.com <http://linuxcareer.com/>
-# (c) 2013 LinuxCareer under GNU GPL v3.0+
 
-#!/bin/bash
+if which ldd >/dev/null; then
+    echo "exists"
+else
+    echo " ldd does not exist"
+    echo " We will be installing it for you :D"
+    apt install ldd -y
+fi
+
 
 CHROOT='/var/chroot'
 mkdir $CHROOT
