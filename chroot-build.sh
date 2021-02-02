@@ -1,14 +1,24 @@
 #!/bin/bash
 
-if which ldd >/dev/null; then
-    echo "exists"
-else
-    echo " ldd does not exist"
-    echo " We will be installing it for you :D"
-    apt install ldd -y
+# Lib installs
+apt update && apt install ldd -y 
+
+# Root check 
+if [ "$EUID" -ne 0 ]
+  then echo "To make this chroot build work Please take root"
+  exit
 fi
 
+# Add User Group
+read -p "Please enter the desired user group: " ugroup
+groupadd $ugroup
 
+# Add user to group 
+read -p "Please enter the desired user name: " uname
+usermod -G $ugroup $uname
+
+
+# Main code 
 CHROOT='/var/chroot'
 mkdir $CHROOT
 
