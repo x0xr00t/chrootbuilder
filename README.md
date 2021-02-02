@@ -2,7 +2,7 @@
 chroot envo builder
 
 
-. $ ./chroot.sh /bin/{ls,cat,nano,echo,rm,sh} /usr/bin/vi /etc/hosts
+. $ ./chroot.sh /bin/{ls,cat,nano,echo,rm,bash} /usr/bin/vi /etc/hosts
 
 # manual add 
 . $ sudo groupadd chrootjail
