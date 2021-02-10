@@ -1,4 +1,9 @@
 #!/bin/bash
+#
+# Author: P.Hoogeveen
+# Aka   : x0xr00t
+# Build : 12122020
+# Name  : Chrootbuild.sh
 
 # Lib installs
 apt update && apt install ldd -y 
